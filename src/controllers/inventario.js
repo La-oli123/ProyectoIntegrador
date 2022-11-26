@@ -1,13 +1,12 @@
-const modelo = require('./../models/usuario');
+const modelo = require('../models/inventario');
 
-const UsuariosController = {
+const inventarioController = {
     create: (req, res) => {
-        const datosUsuarios = req.body;
-        modelo.create(datosUsuarios).then(response => {
-            console.log('se creó el ususario correctamente');
+        const datosInventario = req.body;
+        modelo.create(datosInventario).then(response => {
             res.send(response);
         }).catch(err => {
-            res.status(400).send('No se pudo crear el usuario');
+            res.status(400).send('No se pudo agregar el producto');
         });
     },
 
@@ -22,7 +21,7 @@ const UsuariosController = {
     
     getItem: (req, res) => {
         const id = req.params.id;
-        modelo.findOne({_id: id, status: 1}).then(response => {
+        modelo.findOne({_id: id}).then(response => {
             res.send(response)
         }).catch(err => {
             res.status(404).send('No se encontró')
@@ -54,6 +53,4 @@ const UsuariosController = {
     },
 };
 
-module.exports = UsuariosController;
-
-//SELECT * from usuarios WHERE id= '123' AND status = 1
+module.exports = inventarioController;

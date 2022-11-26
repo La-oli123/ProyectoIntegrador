@@ -11,9 +11,10 @@ app.get('/', (req, res) => {
     res.send('API funcionando :)')
 });
 
+app.use(express.json());
 app.use(apiRoutes);
 
-const uri = 'mongodb+srv://iteso2022:ITESO1234@cluster0.jqhyj.mongodb.net/agenda?retryWrites=true&w=majority'
+const uri = 'mongodb+srv://twofold:twofold12345@proyectointegrador.ib2xxwk.mongodb.net/ProyectoIntegrador'
 
 mongoose.connect(uri, (err) => {
     if (!err) {
