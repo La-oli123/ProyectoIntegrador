@@ -8,12 +8,38 @@ const productosRoutes = require('./src/routes/productos');
 const comprasRoutes = require('./src/routes/compras');
 
 const mongoose = require('mongoose');
+const jwt = require('jsonwebtoken');
 
 const app = express()
 
 const port = process.env.PORT || 3000;
 
 app.use('/', express.static(__dirname + '/public'));
+
+app.get('/', (req, res) => {
+    const url = __dirname + '/public';
+    res.sendFile(url);
+})
+
+app.post('/', (req, res) => {
+    const user = require.body.usuario;
+    const password = req.body.password;
+
+    jwt.sign({user: user}, 'secretKey', (err, token) => {
+        res.json({
+            token
+        });
+    });
+});
+
+app.post("", verifyToken, (req, res) => {
+    res.json({
+    });
+});
+
+function verifyToken (req, res, next){
+
+}
 
 app.use(express.json());
 app.use('/usuarios', usuariosRoutes);
