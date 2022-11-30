@@ -90,3 +90,22 @@
 .contentBx .formBx .inputBx p a {
     color: black;
 }
+
+@media (max-width: 768px) {
+    .contentBx {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1px;
+    }
+
+    .contentBx .formBx {
+        width: 100%;
+        padding: 40px;
+        background-color: #fff;
+        opacity: 10%;
+        margin: 50px;
+    }
+}
