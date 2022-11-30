@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <title>Two Fold.</title> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap-5.2.2-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <script type="text/javascript" src="scripts.js"></script>
+</head>
+<body class="back">
+    <header>
+        <div class="bar">
+            <button class="w3-button w3-transparent w3-xlarge" onclick="open_menu()" id="clic">☰</button>
+            <a class="company" href="index.html"><strong>Two Fold.</strong></a>
+
+            <img src="shopping_bag.png" style="position:absolute; top:18px; right:8px; width:25px">
+
+            <a href="cart.html" style="font-family:Century Gothic; font-size:13px; padding-top:23px; padding-right:17px; padding-bottom:0px;"><script type="text/javascript">document.write(shopping_cart.count);</script></a>            
+            
+            <a id="see" href="help.html">Ayuda</a>
+            <a id="hid" href="help.html">?</a>
+            <a id="see" href="log_in.html">Iniciar Sesión</a>
+            <a id="hid" class="not" href="log_in.html"><img src="log.png" id="hid" class="user"></a>
+            <form action="/action_page.php">
+                <input class="search" type="text" placeholder="Buscar..." sytle="padding-right:30px">
+                <button class="icon" type="submit"><i class="fa fa-search" id="ic"></i></button>
+            </form>
+        </div>
+    </header>
+    <main>
+        <div class="w3-sidebar w3-bar-block w3-border-right" id="menu" style="width:270px;">
+            <button onclick="close_menu()" class="w3-bar-item w3-xxxlarge" id="x">&times;<strong class="company" style="float:right; padding-right:36px;">Two Fold.</strong></button>
+            <a href="#" class="w3-bar-item w3-button">Novedades</a>
+            <a href="#" class="w3-bar-item w3-button" style="color:red; font-weight:bold;">REBAJAS</a>
+            <a href="#" class="w3-bar-item w3-button">Tops</a>
+            <a href="#" class="w3-bar-item w3-button">Hodies</a>
+            <a href="#" class="w3-bar-item w3-button">Jeans</a>
+            <a href="#" class="w3-bar-item w3-button">Shorts</a>
+            <a href="#" class="w3-bar-item w3-button">Zapatos</a>
+            <a href="#" class="w3-bar-item w3-button">Accesorios</a>
+        </div>
+
+        <div class="center">
+            <a href="products.html" class="middle">ARTÍCULOS<br>NUEVOS</a>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
