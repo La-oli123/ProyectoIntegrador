@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const controller = require('../src/controllers/inventario');
+const controller = require('../controllers/usuarios');
 
 router.get('/', controller.list);
 router.post('/',controller.create);
